@@ -1,0 +1,12 @@
+div {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 15px solid #D0B084;
+  box-shadow: 5px 10px 8px 10px #888888;
+  width: 30%;
+  height: 250px;
+}

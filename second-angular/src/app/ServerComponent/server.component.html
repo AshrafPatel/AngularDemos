@@ -1,0 +1,15 @@
+<div>
+  <h3>Input Your Server Name!</h3>
+
+  <input
+    type="text"
+    [(ngModel)]="serverText"
+  />
+  <p>{{serverText}}</p>
+  <button
+    [disabled]="checkDisabled()"
+    (click)="onClick()">
+    Login
+  </button>
+
+</div>
