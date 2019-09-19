@@ -1,0 +1,10 @@
+.white {
+  color: white;
+}
+
+.pStuff {
+  width: 40%;
+  margin: 30px auto;
+  font-size: 2em;
+  padding: 5px 0;
+}

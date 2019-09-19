@@ -1,0 +1,5 @@
+<button (click)="toggleDisplayText()">Display Details</button>
+<p *ngIf = "displayText">Lorem ipsum jbviujwhu isuig huisduigsdiu usihuk</p>
+<p class="pStuff" *ngFor="let text of arrText; let i = index"
+    [ngClass]="{white: i > 4}"
+    [ngStyle]="{backgroundColor: i > 4 ? 'blue': 'yellow'}">{{text}}</p>
