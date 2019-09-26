@@ -1,0 +1,15 @@
+.box-gray {
+  background: #f0f0f0;
+}
+
+.box-gray:hover {
+  background: lightgray;
+}
+
+.recipe-name-description {
+  color: black;
+}
+
+.recipe-name-description h3:hover {
+  text-decoration: none;
+}
