@@ -8,6 +8,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HouseCardComponent } from './house-card/house-card.component';
 import { HousesService } from './services/houses.service';
 import { AddListingFormComponent } from './add-listing-form/add-listing-form.component';
+import { UtilService } from './services/util.service';
+import { SortByPipe } from '../pipes/sort-by.pipe';
 
 @NgModule({
    declarations: [
@@ -15,7 +17,8 @@ import { AddListingFormComponent } from './add-listing-form/add-listing-form.com
       HouseListingComponent,
       NavbarComponent,
       HouseCardComponent,
-      AddListingFormComponent
+      AddListingFormComponent,
+      SortByPipe
    ],
    imports: [
       BrowserModule,
@@ -23,7 +26,8 @@ import { AddListingFormComponent } from './add-listing-form/add-listing-form.com
       HttpClientModule
    ],
    providers: [
-      HousesService
+      HousesService,
+      UtilService
    ],
    bootstrap: [
       AppComponent

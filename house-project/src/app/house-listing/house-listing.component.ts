@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HousesService } from '../services/houses.service';
 import { House } from '../house';
-import { Observable } from 'rxjs';
+import { UtilService } from '../services/util.service';
 
 @Component({
   selector: 'app-house-listing',
@@ -10,10 +10,20 @@ import { Observable } from 'rxjs';
   styleUrls: ['./house-listing.component.css']
 })
 export class HouseListingComponent implements OnInit {
-  houses: Array<House>;
+  houses: Array<any>;
   error: string;
+  sortField = 'price';
+  sortDirection = 'asc';
+  sortFields: Array<string> = [
+    'address',
+    'price',
+    'area',
+    'bathroom',
+    'bedrooms',
+    'type'
+  ];
 
-  constructor(private http: HttpClient, private housesService: HousesService) { }
+  constructor(private http: HttpClient, private housesService: HousesService, public utilService: UtilService) { }
 
   ngOnInit() {
     this.housesService.getAllHouses()
@@ -22,7 +32,7 @@ export class HouseListingComponent implements OnInit {
         error => this.error = error.statusText
       );
     this.housesService.newHouseSubject.subscribe(
-      data => this.houses.push(data)
+      data => this.houses = [data, ...this.houses]
     );
   }
 

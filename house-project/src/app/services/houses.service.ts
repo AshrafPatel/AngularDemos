@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ɵConsole } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { House } from '../house';
@@ -17,8 +17,8 @@ export class HousesService {
   }
 
   addHouse(data) {
-    data.image = 'default-image';
-    this.newHouseSubject.next(this.newHouseSubject);
+    data.image = 'default-crib';
+    this.newHouseSubject.next(data);
   }
 
 }
